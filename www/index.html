@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MagicBeans - </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/index.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="brand">Magic Beans</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <table id="stats" class="table table-bordered table-striped">
+                <tr id="stats-header">
+                    <th>Tube</th>
+                    <th>Buried</th>
+                    <th>Ready</th>
+                    <th>Reserved</th>
+                    <th>Waiting</th>
+                    <th>Total</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="peek-modal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Peek Jobs</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form form-inline">
+            <label for="job-id">Job ID:</label> <input id="job-id" type="text" value="" disabled/>
+        </form>
+        <label for="job-data">Job Data:</label><pre id="job-data"></pre>
+    </div>
+</div>
+
+<div id="tube-modal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Manage Tube <span></span></h3>
+    </div>
+    <div class="modal-body">
+        <div class="modal-left">
+            <button id="insert" class="btn btn-success">Insert</button>
+            <br/>
+            <textarea id="insert-data"></textarea>
+        </div>
+        <div class="modal-right">
+            <form class="form-inline">
+                <div class="input-append">
+                    <input id="kick-count" class="input-small" type="text" placeholder="# Kick">
+                    <button id="kick" class="btn btn-primary" type="button">Kick</button>
+                    <button id="kick-all" class="btn btn-info" type="button">All</button>
+                </div>
+                <br/><br/>
+                <div class="input-append">
+                    <input id="bury-count" class="input-small" type="text" placeholder="# Bury">
+                    <button id="bury" class="btn btn-primary" type="button">Bury</button>
+                    <button id="bury-all" class="btn btn-info" type="button">All</button>
+                </div>
+                <br/><br/>
+                <div class="input-append">
+                    <input id="drain-ready-count" class="input-small" type="text" placeholder="# Drain">
+                    <button id="drain-ready" class="btn btn-warning" type="button">Drain Ready</button>
+                    <button id="drain-all-ready" class="btn btn-danger" type="button">All</button>
+                </div>
+                <br/><br/>
+                <div class="input-append">
+                    <input id="drain-buried-count" class="input-small" type="text" placeholder="# Drain">
+                    <button id="drain-buried" class="btn btn-warning" type="button">Drain Buried</button>
+                    <button id="drain-all-buried" class="btn btn-danger" type="button">All</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/index.js"></script>
+
+</body>
+</html>
